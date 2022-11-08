@@ -1,15 +1,21 @@
-# Ask the user for their name.
-# Remove Whitespace from string and Use title case the string.
-name = (
-    input("What's your name? ")
-    .strip() # Strip extra spaces
-    .title() # Use Propercase
-    )
 
-# Split users name into first and last name
-first, last = name.split(" ")
+def main():
+    # Ask the user for their name.
+    # Remove Whitespace from string and Use title case the string.
+    first, last = (
+        input("What's your name? ")
+        .strip() # Strip extra spaces
+        .title() # Use Propercase
+        .split(" ") # Split users name into first and last name
+        )
+    # Say hello to user.
+    hello(first)
+    return
 
-# Say hello to user.
-print(f"\nHi {first}!")
-print("\nHi " + name + "!")
-print("\nHi", name, "!")
+
+def hello(to="World"):
+    print(f"\nHi {to}!")
+    return
+
+
+main()
