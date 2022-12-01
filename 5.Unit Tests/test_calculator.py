@@ -1,5 +1,10 @@
 from calculator import square
 
+# to use the test function install pytest
+# pip install pytest
+# Execute it like the following:
+# pytest test_calculator.py
+
 # def main():
 #     test_square()
 
